@@ -9,6 +9,12 @@ body{
     margin: 0 auto;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 article{
     padding:20px;
     border: 1px solid #ddd;
@@ -29,9 +35,28 @@ article{
 
 nav a{
     text-decoration: none;
-    margin-right: 16px;
+    
 }
 
-nav{
-    margin-bottom: 10px;
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.perfil{
+    display: flex;
+    gap: 30px;
+    padding: 15px;
+    align-items: center;
+}
+.avatar{
+    background-color: blue;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.info{
+    background-color: red;
+    padding: 5px;
 }

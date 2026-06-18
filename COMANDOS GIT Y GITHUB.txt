@@ -1,0 +1,87 @@
+COMANDOS GIT Y GITHUB
+===========================================
+
+--- CONFIGURACION INICIAL (solo una vez por compu) ---
+
+git --version
+-> Verifica que Git esté instalado y muestra la versión
+
+git config --global user.name "Tu Nombre"
+-> Configura tu nombre para que aparezca en los commits
+
+git config --global user.email "tu-email@ejemplo.com"
+-> Configura tu email (debe ser el mismo que usas en GitHub)
+
+git config --global user.name
+git config --global user.email
+-> Muestran lo que configuraste, para verificar
+
+
+--- CREAR UN REPOSITORIO NUEVO (una vez por proyecto) ---
+
+cd ruta/de/tu/carpeta
+-> Te mueve a la carpeta del proyecto en la terminal
+
+git init
+-> Convierte la carpeta actual en un repositorio Git
+-> Crea una carpeta oculta .git que guarda todo el historial
+
+git branch -M main
+-> Renombra la rama principal a "main" (estándar moderno)
+
+git remote add origin https://github.com/usuario/repo.git
+-> Conecta tu repositorio local con uno en GitHub
+-> "origin" es el nombre que le damos al remoto
+
+git push -u origin main
+-> Sube tu código a GitHub por primera vez
+-> El -u hace que las próximas veces puedas usar solo "git push"
+
+
+--- EL CICLO DE TRABAJO DIARIO (lo vas a repetir siempre) ---
+
+git status
+-> Te dice qué archivos cambiaron, cuáles están listos
+   para guardar (verde) y cuáles no (rojo)
+
+git add .
+-> Prepara TODOS los archivos modificados para el próximo commit
+-> El punto significa "todo en esta carpeta"
+
+git add nombre-archivo.html
+-> Prepara solo un archivo específico, si no quieres
+   subir todos los cambios a la vez
+
+git commit -m "mensaje describiendo el cambio"
+-> Guarda una "foto" de tu proyecto en este momento
+-> El mensaje debe explicar QUE hiciste, ej:
+   "Agrega flexbox al header" o "Corrige bug en el nav"
+
+git push
+-> Sube tus commits guardados localmente hacia GitHub
+-> Solo funciona después de haber hecho -u origin main una vez
+
+
+--- COMANDOS UTILES PARA REVISAR ---
+
+git log
+-> Muestra el historial completo de commits
+-> Presiona "q" para salir de la vista
+
+git log --oneline
+-> Muestra el historial pero en una sola linea por commit
+   (mas facil de leer)
+
+git diff
+-> Muestra exactamente que lineas cambiaste,
+   antes de hacer git add
+
+
+--- SI TE CONFUNDES, ESTE ES EL ORDEN SIEMPRE ---
+
+1. git status        (revisa que cambio)
+2. git add .          (prepara los cambios)
+3. git commit -m "X"  (guarda la version)
+4. git push           (sube a GitHub)
+
+===========================================

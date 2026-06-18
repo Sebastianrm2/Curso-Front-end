@@ -1,0 +1,118 @@
+CSS 
+===========================================
+
+--- SELECTORES (como elegir QUE elemento estilizar) ---
+
+etiqueta { }
+-> Selecciona TODOS los elementos de ese tipo en la pagina
+   Ejemplo: article { } afecta a todos los <article>
+
+.clase { }
+-> Selecciona elementos que tengan class="clase" en el HTML
+   Se usa cuando el estilo se repite en varios elementos
+   pero no necesariamente en TODOS los de ese tipo
+   Ejemplo: .contacto { } afecta a <section class="contacto">
+
+#id { }
+-> Selecciona UN solo elemento especifico que tenga id="id"
+   Se usa para algo unico en la pagina (o para que JavaScript
+   lo encuentre despues)
+   Ejemplo: #articulo_1 { }
+
+nav a { }
+-> Selector combinado: selecciona todos los <a> que estan
+   DENTRO de un <nav>
+   El espacio entre "nav" y "a" significa "que esta adentro de"
+
+* { }
+-> Selecciona TODO. Se usa normalmente para resets globales,
+   como box-sizing: border-box
+
+
+--- BOX MODEL (como se calcula el tamano de cada elemento) ---
+
+box-sizing: border-box;
+-> Hace que width/height incluyan padding y border
+   SIEMPRE ponerlo en el selector * al inicio del CSS
+
+width / height
+-> Tamano del contenido
+
+padding
+-> Espacio INTERNO, entre el contenido y el borde
+   padding: 20px;          -> 20px en los 4 lados
+   padding: 10px 20px;     -> 10px arriba/abajo, 20px izq/der
+   padding: 10px 20px 5px 15px; -> arriba, derecha, abajo, izquierda
+
+border
+-> El borde visible de la caja
+   border: 1px solid #ddd;  -> grosor, estilo, color
+
+border-radius
+-> Redondea las esquinas
+   border-radius: 8px;     -> esquinas un poco redondeadas
+   border-radius: 50%;     -> hace un circulo (si es cuadrado)
+
+margin
+-> Espacio EXTERNO, entre esta caja y las cajas vecinas
+   Misma sintaxis que padding (1, 2 o 4 valores)
+   margin: 0 auto;         -> centra horizontalmente un bloque
+
+
+--- TEXTO Y COLORES BASICOS ---
+
+color
+-> Color del texto
+
+background-color
+-> Color de fondo de la caja
+
+text-align
+-> Alineacion horizontal del texto: left, center, right
+
+text-decoration: none;
+-> Quita el subrayado (util en links <a>)
+
+font-family
+-> Tipografia. Ejemplo: font-family: Arial, sans-serif;
+
+
+--- FLEXBOX (alinear y distribuir elementos) ---
+
+display: flex;
+-> Activa flexbox EN EL CONTENEDOR (el padre)
+   Sin esto, ninguna propiedad de flexbox funciona
+
+flex-direction
+-> Direccion del eje principal
+   row (default) -> horizontal
+   column        -> vertical
+
+justify-content
+-> Distribuye los hijos en el EJE PRINCIPAL (horizontal por defecto)
+   flex-start    -> todos pegados al inicio
+   center        -> todos centrados
+   space-between -> el primero y ultimo en los extremos,
+                    espacio igual entre todos
+   space-around  -> espacio igual alrededor de cada uno
+
+align-items
+-> Alinea los hijos en el EJE CRUZADO (vertical por defecto)
+   flex-start, center, flex-end, stretch
+
+gap
+-> Espacio entre los elementos hijos
+   Reemplaza el tener que poner margin manual en cada hijo
+   gap: 20px;
+
+flex: 1;
+-> (en un hijo) hace que ese hijo crezca para ocupar
+   el espacio disponible
+
+
+--- ENLAZAR EL CSS AL HTML ---
+
+<link rel="stylesheet" href="style.css">
+-> Va dentro del <head> del HTML
+
+===========================================
