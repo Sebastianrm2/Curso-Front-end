@@ -60,3 +60,34 @@ nav {
     background-color: red;
     padding: 5px;
 }
+
+    .tecnologias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 10px;
+}
+
+    .tech-card{
+        background-color: beige;
+        border-radius: 5px;
+        border: 1px solid black;
+        text-align: center;
+        height: auto;
+}
+
+    .proyectos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    gap:10px;
+    
+}
+
+.proyecto-card{
+    background-color: brown;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+}
