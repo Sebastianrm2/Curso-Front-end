@@ -41,3 +41,8 @@ const describir = (objeto) => {
 
 console.log(describir({ nombre: "Sebastian", nivel: "Junior" }));
 
+const crearTarjeta = (objeto) => {
+    return "Proyecto " + objeto.titulo + " | tecnologias: " + objeto.tecnologias 
+}
+
+console.log(crearTarjeta({titulo: "Aprendiendo las siguientes Tecnologias", tecnologias:"Javascript"}));
